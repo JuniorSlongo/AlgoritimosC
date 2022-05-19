@@ -40,6 +40,6 @@ int main(){
 	printf("O nome do usuario eh: %s\n", nome);
 	printf("Seu salario era: %i reais\n", salAtual);
 	printf("Sua porcentagem de aumento foi: %i%%\n", percent);
-	printf("O valor corrigido de seu salario eh: %2.f reais\n", salCor);
+	printf("O valor corrigido de seu salario eh: %.2f reais\n", salCor);
 }
 	      
