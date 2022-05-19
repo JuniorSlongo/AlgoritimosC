@@ -1,0 +1,45 @@
+/*Escrever um algoritmo que lê, para cada funcionário, o seu nome e o seu salário atual,
+ escrevendo depois o nome do funcionário, seu salário atual,
+ o percentual de seu aumento e o valor do salário corrigido.
+*/
+#include <stdio.h>
+#include <math.h>
+int main(){
+	float salCor, aumento;
+	int percent, salAtual;
+	char nome[30];
+	printf("Informe seu salario atual: "); scanf("%i", &salAtual);
+	printf("Informe seu nome: "); scanf("%s", nome);
+	if (salAtual <= 300){
+		salCor=salAtual*1.1;
+		percent=10;
+	   } else if(salAtual > 300 && salAtual <= 600){
+	        salCor=salAtual*1.11;
+	        percent=11;
+	    }
+	    else if(salAtual > 600 && salAtual <= 900){
+	        salCor=salAtual*1.12;
+	        percent=12;
+	    }
+	    else if(salAtual > 900 && salAtual <= 1500){
+	        salCor=salAtual*1.06;
+	        percent=6;
+	    }
+	    else if(salAtual > 1500 && salAtual <= 2000){
+	        salCor=salAtual*1.03;
+	        percent=3;
+	    }
+	    else if(salAtual > 2000){
+	        salCor=salAtual;
+	        percent=0;
+	    }
+	    else {
+	        printf("O valor do salario atual nao eh valido");
+	   
+	}
+	printf("O nome do usuario eh: %s\n", nome);
+	printf("Seu salario era: %i reais\n", salAtual);
+	printf("Sua porcentagem de aumento foi: %i%%\n", percent);
+	printf("O valor corrigido de seu salario eh: %2.f reais\n", salCor);
+}
+	      
