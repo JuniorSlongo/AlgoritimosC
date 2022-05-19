@@ -1,0 +1,49 @@
+/*Desenvolva um algoritmo que calcule o imposto de renda de um contribuinte considerando que os dados do contribuinte são: número do CPF, 
+número de dependentes e renda mensal.
+ Para o contribuinte será feito um desconto de 5% de salário mínimo por dependente (máximo de 3 dependentes 15%).
+*/
+#include <stdio.h>
+#include <math.h>
+int main() {
+	float salMin, impo, rendaMes, desc;
+	int dep, numSalMin;
+	char cpf[11];
+	printf("Informe sua renda mensal: "); scanf("%f", &rendaMes);
+	printf("informe seu numero de dependentes: "); scanf("%i", &dep);
+	printf("informe o valor atual do salario minimo: "); scanf("%f", &salMin);
+	printf("informe seu CPF: "); scanf("%s", cpf);
+	numSalMin = rendaMes/salMin;
+	switch (numSalMin){
+		case 0:
+		case 1:
+			printf("isento de imposto\n");
+		break;
+		case 2:
+			impo = rendaMes*0.05;
+		break;
+		case 3:
+		case 4: 
+			impo = rendaMes*0.10;
+		break;
+		case 5:
+		case 6:
+			impo = rendaMes*0.15;
+		break;
+		default:
+			impo = rendaMes*0.2;
+		break;
+		
+	}
+	if (dep >= 1){
+		if (dep == 1){
+			desc = salMin*0.05;	
+	}else if(dep == 2){
+			desc = salMin*(0.05*2);
+			}else{
+				desc = salMin*(0.05*3);
+			} 
+	impo=impo-desc;		
+	}
+		
+	printf("O valor do imposto eh: %f", impo);
+	}
