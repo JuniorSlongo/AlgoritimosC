@@ -1,0 +1,21 @@
+/*João tem 1,50 metro e cresce 2 centímetros por ano, enquanto Zé tem 1,10 
+metro e cresce 3 centímetros por ano. Construa um algoritmo que calcule e imprima 
+quantos anos serão necessários para que Zé seja maior que João.
+*/
+#include <stdio.h>
+
+int main(){
+    int alturaJoao, alturaZe, contAnos;
+    alturaJoao = 150;
+    alturaZe = 110;
+    contAnos = 0;
+    while (alturaJoao > alturaZe){
+        alturaJoao = alturaJoao + 2;
+        alturaZe = alturaZe +3;
+        contAnos++;
+    }
+    printf("Ze levara %i anos para ficar maior que joao", contAnos);
+}
+
+
+  
