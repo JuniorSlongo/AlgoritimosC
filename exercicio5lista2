@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+  double e, fat;
+  int cont, j, n;
+
+  printf("digite o valor de n: \n");
+  scanf("%d", &n);
+
+  e = 1.0;
+  for(cont = 1; cont <= n; cont++){
+    
+    fat = 1.0;
+    for(j = 2; j <= cont; j++)
+      fat = fat * j;
+    e = e + (1.0 / fat);
+  }
+  printf("O valor de e eh = %.10lf\n", e); 
+  return 0;
+}
